@@ -39,8 +39,8 @@ This project is still in progress.
 ### The Environment 
 
 <p align="center">
-<img src="images/rrl_map.JPG" alt="map" width="480">
+<img src="images/environment.JPG" alt="env" width="480">
 </p>
 <p align="center">
-<em>Map of RRL Lab</em>
+<em>Multiple TurtleBots Spawned in the Environment</em>
 </p>
