@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-class map:
+class maps:
     def __init__(self,map_size,resolution,robot_radius,clearance):
         self.map_size = map_size
         self.res = resolution
@@ -27,36 +27,36 @@ class map:
 
 
 
-        # rect1 = self.rect_offset(np.multiply([[1.4995 - robot_radius,9.1 + robot_radius],[3.0985 + robot_radius,7.501 - robot_radius]],self.res))
+        rect1 = self.rect_offset(np.multiply([[1.4995 - robot_radius,9.1 + robot_radius],[3.0985 + robot_radius,7.501 - robot_radius]],self.res))
 
         rect2 = self.rect_offset(np.multiply([[4.38 - robot_radius,4.98 + robot_radius],[5.29 + robot_radius,3.15 - robot_radius]], self.res))
 
         rect3 = self.rect_offset(np.multiply([[4.74 - robot_radius,1.87 + robot_radius],[7.48 + robot_radius,0.35 - robot_radius]], self.res))
 
-        # rect4 = self.rect_offset(np.multiply([[5.29 - robot_radius,3.41 + robot_radius],[7.12 + robot_radius,2.65 - robot_radius]], self.res))
+        rect4 = self.rect_offset(np.multiply([[5.29 - robot_radius,3.41 + robot_radius],[7.12 + robot_radius,2.65 - robot_radius]], self.res))
 
-        # rect5 = self.rect_offset(np.multiply([[6.85 - robot_radius,0.35 + robot_radius],[11.1,0]], self.res))
+        rect5 = self.rect_offset(np.multiply([[6.85 - robot_radius,0.35 + robot_radius],[11.1,0]], self.res))
 
-        # rect6 = self.rect_offset(np.multiply([[7.44 - robot_radius,6.97 + robot_radius],[11.1,6.21 - robot_radius]], self.res))
+        rect6 = self.rect_offset(np.multiply([[7.44 - robot_radius,6.97 + robot_radius],[11.1,6.21 - robot_radius]], self.res))
 
         rect7 = self.rect_offset(np.multiply([[7.79 - robot_radius,0.93 + robot_radius],[8.96 + robot_radius,0.35]], self.res))
 
-        # rect8 = self.rect_offset(np.multiply([[7.845 - robot_radius,3.84 + robot_radius],[9.365 + robot_radius,2.67 - robot_radius]], self.res))
+        rect8 = self.rect_offset(np.multiply([[7.845 - robot_radius,3.84 + robot_radius],[9.365 + robot_radius,2.67 - robot_radius]], self.res))
 
-        # rect9 = self.rect_offset(np.multiply([[8.32 - robot_radius,10.1],[9.18 + robot_radius,8.27 - robot_radius]], self.res))
+        rect9 = self.rect_offset(np.multiply([[8.32 - robot_radius,10.1],[9.18 + robot_radius,8.27 - robot_radius]], self.res))
 
         rect10 = self.rect_offset(np.multiply([[9.27 - robot_radius,1.11 + robot_radius],[11.1,0.35]], self.res))
 
         rect11 = self.rect_offset(np.multiply([[9.83 - robot_radius,10.1],[10.26 + robot_radius,9.19 - robot_radius]], self.res))
 
-        # rect12 = self.rect_offset(np.multiply([[10.19 - robot_radius,4.485 + robot_radius],[11.1,3.625 - robot_radius]], self.res))
+        rect12 = self.rect_offset(np.multiply([[10.19 - robot_radius,4.485 + robot_radius],[11.1,3.625 - robot_radius]], self.res))
 
-        # rect13 = self.rect_offset(np.multiply([[10.52 - robot_radius,5.655 + robot_radius],[11.1,4.485]], self.res))
+        rect13 = self.rect_offset(np.multiply([[10.52 - robot_radius,5.655 + robot_radius],[11.1,4.485]], self.res))
 
         rect14 = self.rect_offset(np.multiply([[10.52 - robot_radius,2.9525 + robot_radius],[11.1,1.7825 - robot_radius]], self.res))
 
-        # c1 = self.cir_offset(np.multiply([3.9,9.6], self.res))
-        # c1_rad = 0.405* self.res + robot_radius
+        c1 = self.cir_offset(np.multiply([3.9,9.6], self.res))
+        c1_rad = 0.405* self.res + robot_radius
 
         # print(c1)
         # print(cir_offset(c1))
@@ -64,24 +64,24 @@ class map:
         c2 = self.cir_offset(np.multiply([4.38,7.36], self.res))
         c2_rad = 0.405* self.res + robot_radius
 
-        # c3 = self.cir_offset(np.multiply([4.38,2.74], self.res))
-        # c3_rad = 0.405* self.res + robot_radius
+        c3 = self.cir_offset(np.multiply([4.38,2.74], self.res))
+        c3_rad = 0.405* self.res + robot_radius
 
         c4 = self.cir_offset(np.multiply([3.9,0.405], self.res))
         c4_rad = 0.405* self.res + robot_radius
 
-        # c5 = self.cir_offset(np.multiply([1.4995,8.3005], self.res))
-        # c5_rad = 0.7995* self.res + robot_radius
+        c5 = self.cir_offset(np.multiply([1.4995,8.3005], self.res))
+        c5_rad = 0.7995* self.res + robot_radius
 
         c6 = self.cir_offset(np.multiply([3.0985,8.3005], self.res))
         c6_rad = 0.7995* self.res + robot_radius
 
         grid = np.multiply([map_size[0],map_size[1]], self.res)
 
-        # self.rectangles = [rect1,rect2,rect3,rect4,rect5,rect6,rect7,rect8,rect9,rect10,rect11,rect12,rect13,rect14]
-        self.rectangles = [rect2,rect3,rect7,rect10,rect11,rect14]
-        # self.circles = [[c1,c1_rad],[c2,c2_rad],[c3,c3_rad],[c4,c4_rad],[c5,c5_rad],[c6,c6_rad]]
-        self.circles = [[c2,c2_rad],[c4,c4_rad],[c6,c6_rad]]
+        self.rectangles = [rect1,rect2,rect3,rect4,rect5,rect6,rect7,rect8,rect9,rect10,rect11,rect12,rect13,rect14]
+        # self.rectangles = [rect2,rect3,rect7,rect10,rect11,rect14]
+        self.circles = [[c1,c1_rad],[c2,c2_rad],[c3,c3_rad],[c4,c4_rad],[c5,c5_rad],[c6,c6_rad]]
+        # self.circles = [[c2,c2_rad],[c4,c4_rad],[c6,c6_rad]]
 
 
     def is_point_in_rect(self,points,rect_coordinates):        # points = [0,0]    ## rect1 = [[1,4],[4,2]]
@@ -171,7 +171,7 @@ class map:
         self.rectangles.append(new_rect)
 
     def update_map(self,M):
-        ## M = {1, x, y, Σ, w, b, t}
+        ## M = {1, x, y, sigma, w, b, t}
         if M[0] == 1:
             self.add_obstacle(M[1],M[2],M[4],M[5])
 

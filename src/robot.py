@@ -1,10 +1,10 @@
 import math
 import numpy as np
-from map import map
+from map import maps
 
 class robot:
 
-    def __init__(self, robot_radius, rpm1, rpm2,map_supplied:map,resolution, length = 0.23, wheel_rad =0.076,dt = 1):
+    def __init__(self, robot_radius, rpm1, rpm2, map_supplied :maps,resolution, length = 0.23, wheel_rad =0.076,dt = 1):
 
         self.map = map_supplied
         self.res = resolution

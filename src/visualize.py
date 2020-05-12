@@ -26,7 +26,7 @@ class display:
         plt.plot(self.start_position[0],self.start_position[1],'bo',label = 'start position')
         plt.plot(self.goal_position[0],self.goal_position[1],'go',label = 'goal position')
         plt.plot(node_path_array[:,0],node_path_array[:,1],'ro',label = 'path')
-        plt.plot(visited_node_array[:,0],visited_node_array[:,1],'b+', label = 'explored nodes')
+        # plt.plot(visited_node_array[:,0],visited_node_array[:,1],'b+', label = 'explored nodes')
 
         plt.xlim(self.min_x,self.max_x)
         plt.ylim(self.min_y,self.max_y)

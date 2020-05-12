@@ -1,16 +1,18 @@
-
 from robot import robot
-from map import map
+from map import maps
 import queue
 import numpy as np
+import sys
+import os
 
 class search:
-    def __init__(self,start_position,goal_position,map_supplied: map,robot_supplied:robot,initial_theta = 0):
+    def __init__(self,start_position,goal_position,map_supplied : maps,robot_supplied : robot,s_no,initial_theta = 0):
 
         self.robot = robot_supplied
         self.start_position = start_position
         self.goal_position = goal_position
         self.initial_theta = initial_theta
+        self.serial = s_no
 
         self.map = map_supplied
 
@@ -57,7 +59,7 @@ class search:
         status = True
         if self.map.is_obstacle(self.start_position) or self.map.is_obstacle(self.goal_position):
             status = False
-            print('either the start_position or your goal position is in obstacle space, enter a valid input')
+            sys.exit('either the start_position or your goal position is in obstacle space, enter a valid input')
         return status
 
 
@@ -111,7 +113,7 @@ class search:
                     if self.map.is_obstacle(action_pos) == False:
                         self.node_check_set.add(str([int(action_pos[0]),int(action_pos[1])])) ## marked as visited --> added to visited nodes ## str([d(act[0]),d(act[1])])
                         self.visited_node.append(action_pos)
-                        print(str([int(action_pos[0]),int(action_pos[1])]))
+                        # print(str([int(action_pos[0]),int(action_pos[1])]))
                         cost = action_cost + self.node_info_dict[str([int(action_pos[0]),int(action_pos[1])])] + self.cost_to_go(action_pos)
                         self.node_info_dict[str([int(action_pos[0]),int(action_pos[1])])] = cost
                         self.q.put([cost,[action[0],action[1],action_theta]])
@@ -180,13 +182,19 @@ class search:
 
         velocity_array = np.asarray(velocity_list)
 
+        base_name = 'converted_velocities'
+        suffix = '.txt'
 
-        # with open('converted_velocities.txt', 'w') as velocities_file:
-        #
-        #     for i in velocity_array:
-        #         p = np.empty([1,6])
-        #         p[0:,] = i
-        #         np.savetxt(velocities_file,p,delimiter='\t')
+        fname = os.path.join(base_name + str(self.serial) + suffix)
+
+        # print(fname)
+
+        with open(fname, 'w') as velocities_file:
+
+            for i in velocity_array:
+                p = np.empty([1,6])
+                p[0:,] = i
+                np.savetxt(velocities_file,p,delimiter='\t')
 
 
         return velocity_list,node_path
