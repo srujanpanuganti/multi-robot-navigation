@@ -2,6 +2,7 @@
 
 * This Project Implements A* Path Planning Algorithm for a differential drive robot.
 * This Project is also simulated using 5 Turtlebot 2 robots using ROS Gazebo
+* This project is a framework for multiple robot navigation
 
 ## Map of the environment 
 The Following Map is used to plan the path
@@ -26,4 +27,4 @@ following packages have to be imported for running this file
 * matplotlib.pyplot
 
 ## Execution
-The code is d
+This project is still in progress.
