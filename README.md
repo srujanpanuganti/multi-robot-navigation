@@ -4,6 +4,13 @@
 * This Project is also simulated using 5 Turtlebot 2 robots using ROS Gazebo
 * This project is a framework for multiple robot navigation
 
+This project majorly inherits the Multi-Agent Navigation algorithm discussed in the following paper
+
+`Abhijeet Ravankar ; Ankit A. Ravankar ; Yukinori Kobayashi ; Takanori
+Emaru,”Can robots help each other to plan optimal paths in dynamic
+maps?,” 56th Annual Conference of the Society of Instrument and
+Control Engineers of Japan, November, 2017`
+
 ## Map of the environment 
 The Following Map is used to plan the path
 
