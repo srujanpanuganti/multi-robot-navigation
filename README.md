@@ -4,7 +4,8 @@
 * This Project is also simulated using 5 Turtlebot 2 robots using ROS Gazebo
 * This project is a framework for multiple robot navigation
 
-The Project Majorly inherists Multi-Agent Navigation Algorithm from the following paper:
+* The Project Majorly inherists Multi-Agent Navigation Algorithm from the following paper:
+
 `Abhijeet Ravankar, Ankit A. Ravankar, Yukinori Kobayashi, Takanori
 Emaru, ”Can robots help each other to plan optimal paths in dynamic
 maps?”, 56th Annual Conference of the Society of Instrument and
@@ -34,4 +35,12 @@ following packages have to be imported for running this file
 
 ## Execution
 This project is still in progress.
-Hello
+
+### The Environment 
+
+<p align="center">
+<img src="images/rrl_map.JPG" alt="map" width="480">
+</p>
+<p align="center">
+<em>Map of RRL Lab</em>
+</p>
