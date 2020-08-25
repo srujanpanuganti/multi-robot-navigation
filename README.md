@@ -6,10 +6,12 @@
 
 * The Project Majorly inherists Multi-Agent Navigation Algorithm from the following paper:
 
-`Abhijeet Ravankar, Ankit A. Ravankar, Yukinori Kobayashi, Takanori
+```
+Abhijeet Ravankar, Ankit A. Ravankar, Yukinori Kobayashi, Takanori
 Emaru, ”Can robots help each other to plan optimal paths in dynamic
 maps?”, 56th Annual Conference of the Society of Instrument and
-Control Engineers of Japan, November, 2017.`
+Control Engineers of Japan, November, 2017.
+```
 
 ## Map of the environment 
 The Following Map is used to plan the path
